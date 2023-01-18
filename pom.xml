@@ -8,6 +8,8 @@
 	<packaging>war</packaging>
 
 	<properties>
+		<sonar.host.url>http://172.31.84.149:9000/</sonar.host.url>
+                <sonar.login>squ_ae98ae22994f6dac191a0fa32bac97d1b9d2f971</sonar.login>
 		<java-version>1.8</java-version>
 		<jackson.version>1.9.13</jackson.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -44,6 +46,22 @@
 
 
 	</dependencies>
+	
+	<distributionManagement>
+	
+	    <repository>
+	      <id>nexus</id>
+	      <name>Mithun Technologies Releases Nexus Repository</name>
+	      <url>http://172.31.91.240:9980/pavandevops/repository/icicibank-release/</url>
+	    </repository>
+	    
+	    <snapshotRepository>
+	      <id>nexus</id>
+	      <name>Mithun Technologies Snapshot Nexus Repository </name>
+	      <url>http://172.31.91.240:9980/pavandevops/repository/icici-snapshot/</url>
+	    </snapshotRepository>
+	    
+	</distributionManagement>
 
 	<build>
 		<finalName>api</finalName>
